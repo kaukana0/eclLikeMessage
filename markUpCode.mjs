@@ -13,11 +13,23 @@ export default class MarkUpCode {
 
   static html() {
     return `
-    <link  href="../../../redist/ecl/ecl-eu.css" rel="stylesheet"/>
+    <link  href="./redist/ecl/ecl-eu.css" rel="stylesheet"/>
+
+    <div id="bg" style="display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4);">
+    </div>
 
 
-
-<div class="ecl-message ecl-message--info" data-ecl-message="" role="alert" data-ecl-auto-init="Message" id="main" style="
+<div class="ecl-message ecl-message--info" data-ecl-message="" role="alert" id="main" style="
 	display:none;
 	position: fixed;
 	top: 50%;
@@ -28,14 +40,14 @@ export default class MarkUpCode {
   <span style="display:flex;">
 
     <svg class="ecl-icon ecl-icon--m ecl-message__icon" focusable="false" aria-hidden="true" >
-      <use xlink:href="../redist/ecl/icons.svg#information"></use>
+      <use xlink:href="./redist/ecl/icons.svg#information"></use>
     </svg>
     <div class="ecl-message__content">
       <button class="ecl-button ecl-button--ghost ecl-message__close" type="button" data-ecl-message-close id="button">
         <span class="ecl-button__container">
           <span class="ecl-button__label" data-ecl-label="true">Close</span>
           <svg class="ecl-icon ecl-icon--s ecl-button__icon ecl-button__icon--after" focusable="false" aria-hidden="true" data-ecl-icon>
-            <use xlink:href="../redist/ecl/icons.svg#close-filled"></use>
+            <use xlink:href="./redist/ecl/icons.svg#close-filled"></use>
           </svg>
         </span>
       </button>

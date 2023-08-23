@@ -19,11 +19,13 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("header").innerHTML=val
 	}
 	show() {
+		this.shadowRoot.getElementById("bg").style.display="block"
 		this.shadowRoot.getElementById("main").style.display="block"
 		setTimeout(()=>this.hide(), 7000)
 	}
 	hide() {
 		this.shadowRoot.getElementById("main").style.display="none"
+		this.shadowRoot.getElementById("bg").style.display="none"
 	}
 
 
