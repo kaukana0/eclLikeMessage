@@ -18,10 +18,11 @@ class Element extends HTMLElement {
 	setHeader(val) {
 		this.shadowRoot.getElementById("header").innerHTML=val
 	}
-	show() {
+	show(showClose=true, timeout=7000) {
+		this.shadowRoot.getElementById("close").style.display=showClose?"block":"none"
 		this.shadowRoot.getElementById("bg").style.display="block"
 		this.shadowRoot.getElementById("main").style.display="block"
-		setTimeout(()=>this.hide(), 7000)
+		if(timeout) {	setTimeout(()=>this.hide(), timeout) }
 	}
 	hide() {
 		this.shadowRoot.getElementById("main").style.display="none"

@@ -44,7 +44,7 @@ export default class MarkUpCode {
     </svg>
     <div class="ecl-message__content">
       <button class="ecl-button ecl-button--ghost ecl-message__close" type="button" data-ecl-message-close id="button">
-        <span class="ecl-button__container">
+        <span id="close" class="ecl-button__container">
           <span class="ecl-button__label" data-ecl-label="true">Close</span>
           <svg class="ecl-icon ecl-icon--s ecl-button__icon ecl-button__icon--after" focusable="false" aria-hidden="true" data-ecl-icon>
             <use xlink:href="./redist/ecl/icons.svg#close-filled"></use>
