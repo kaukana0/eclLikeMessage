@@ -19,7 +19,7 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("header").innerHTML=val
 	}
 	show(showClose=true, timeout=7000) {
-		this.shadowRoot.getElementById("close").style.display=showClose?"block":"none"
+		this.shadowRoot.getElementById("close").style.display=showClose?"flex":"none"
 		this.shadowRoot.getElementById("bg").style.display="block"
 		this.shadowRoot.getElementById("main").style.display="block"
 		if(timeout) {	setTimeout(()=>this.hide(), timeout) }
